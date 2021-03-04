@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="suggestion.SuggestionController">
+    <children>
+      <TableView fx:id="suggestionsTable" layoutX="28.0" layoutY="159.0" prefHeight="327.0" prefWidth="664.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="62.0" style="-fx-alignment: center;" text="ID" />
+          <TableColumn fx:id="titleCol" prefWidth="128.0" style="-fx-alignment: center;" text="Title" />
+            <TableColumn fx:id="descriptionCol" prefWidth="191.0" style="-fx-alignment: center;" text="Description" />
+            <TableColumn fx:id="answerCol" prefWidth="187.0" style="-fx-alignment: center;" text="Answer" />
+            <TableColumn fx:id="editCol" prefWidth="95.0" style="-fx-alignment: center;" text="Action" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="53.0" fitWidth="53.0" layoutX="74.0" layoutY="98.0" onMouseClicked="#getAddView" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/add-file.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="72.0" layoutX="163.0" layoutY="98.0" onMouseClicked="#refreshTable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/refresh.png" />
+         </image>
+      </ImageView>
+   </children>   
+</AnchorPane>
